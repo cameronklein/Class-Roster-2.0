@@ -13,6 +13,16 @@
 		7E6E8EF019B99DF200DAD912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8EEE19B99DF200DAD912 /* Main.storyboard */; };
 		7E6E8EF219B99DF200DAD912 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8EF119B99DF200DAD912 /* Images.xcassets */; };
 		7E6E8EFE19B99DF200DAD912 /* Class_RosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8EFD19B99DF200DAD912 /* Class_RosterTests.swift */; };
+		7E6E8F0819B99E5B00DAD912 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0719B99E5B00DAD912 /* Person.swift */; };
+		7E6E8F1019B99E8A00DAD912 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0919B99E8A00DAD912 /* AddPersonViewController.swift */; };
+		7E6E8F1119B99E8A00DAD912 /* Camera-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0A19B99E8A00DAD912 /* Camera-Icon.png */; };
+		7E6E8F1219B99E8A00DAD912 /* cameron.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0B19B99E8A00DAD912 /* cameron.jpg */; };
+		7E6E8F1319B99E8A00DAD912 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0C19B99E8A00DAD912 /* DetailViewController.swift */; };
+		7E6E8F1419B99E8A00DAD912 /* githublogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0D19B99E8A00DAD912 /* githublogo.png */; };
+		7E6E8F1519B99E8A00DAD912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */; };
+		7E6E8F1619B99E8A00DAD912 /* Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0F19B99E8A00DAD912 /* Roster.plist */; };
+		7E6E8F1919B99F5D00DAD912 /* Blue-Gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F1719B99F5D00DAD912 /* Blue-Gradient.png */; };
+		7E6E8F1A19B99F5D00DAD912 /* unknownSilhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		7E6E8EF719B99DF200DAD912 /* Class RosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Class RosterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E8EFC19B99DF200DAD912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6E8EFD19B99DF200DAD912 /* Class_RosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class_RosterTests.swift; sourceTree = "<group>"; };
+		7E6E8F0719B99E5B00DAD912 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7E6E8F0919B99E8A00DAD912 /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		7E6E8F0A19B99E8A00DAD912 /* Camera-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera-Icon.png"; sourceTree = "<group>"; };
+		7E6E8F0B19B99E8A00DAD912 /* cameron.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cameron.jpg; sourceTree = "<group>"; };
+		7E6E8F0C19B99E8A00DAD912 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7E6E8F0D19B99E8A00DAD912 /* githublogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = githublogo.png; sourceTree = "<group>"; };
+		7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7E6E8F0F19B99E8A00DAD912 /* Roster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Roster.plist; sourceTree = "<group>"; };
+		7E6E8F1719B99F5D00DAD912 /* Blue-Gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue-Gradient.png"; sourceTree = "<group>"; };
+		7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknownSilhouette.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,11 @@
 			children = (
 				7E6E8EE719B99DF200DAD912 /* AppDelegate.swift */,
 				7E6E8EEC19B99DF200DAD912 /* ViewController.swift */,
+				7E6E8F0919B99E8A00DAD912 /* AddPersonViewController.swift */,
+				7E6E8F0C19B99E8A00DAD912 /* DetailViewController.swift */,
+				7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */,
+				7E6E8F0F19B99E8A00DAD912 /* Roster.plist */,
+				7E6E8F0719B99E5B00DAD912 /* Person.swift */,
 				7E6E8EEE19B99DF200DAD912 /* Main.storyboard */,
 				7E6E8EF119B99DF200DAD912 /* Images.xcassets */,
 				7E6E8EE919B99DF200DAD912 /* Class_Roster.xcdatamodeld */,
@@ -90,6 +115,11 @@
 		7E6E8EE519B99DF200DAD912 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */,
+				7E6E8F1719B99F5D00DAD912 /* Blue-Gradient.png */,
+				7E6E8F0D19B99E8A00DAD912 /* githublogo.png */,
+				7E6E8F0B19B99E8A00DAD912 /* cameron.jpg */,
+				7E6E8F0A19B99E8A00DAD912 /* Camera-Icon.png */,
 				7E6E8EE619B99DF200DAD912 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,8 +222,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6E8F1619B99E8A00DAD912 /* Roster.plist in Resources */,
 				7E6E8EF019B99DF200DAD912 /* Main.storyboard in Resources */,
+				7E6E8F1A19B99F5D00DAD912 /* unknownSilhouette.png in Resources */,
+				7E6E8F1119B99E8A00DAD912 /* Camera-Icon.png in Resources */,
 				7E6E8EF219B99DF200DAD912 /* Images.xcassets in Resources */,
+				7E6E8F1519B99E8A00DAD912 /* Main.storyboard in Resources */,
+				7E6E8F1419B99E8A00DAD912 /* githublogo.png in Resources */,
+				7E6E8F1219B99E8A00DAD912 /* cameron.jpg in Resources */,
+				7E6E8F1919B99F5D00DAD912 /* Blue-Gradient.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +250,10 @@
 			files = (
 				7E6E8EED19B99DF200DAD912 /* ViewController.swift in Sources */,
 				7E6E8EE819B99DF200DAD912 /* AppDelegate.swift in Sources */,
+				7E6E8F0819B99E5B00DAD912 /* Person.swift in Sources */,
+				7E6E8F1319B99E8A00DAD912 /* DetailViewController.swift in Sources */,
 				7E6E8EEB19B99DF200DAD912 /* Class_Roster.xcdatamodeld in Sources */,
+				7E6E8F1019B99E8A00DAD912 /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
