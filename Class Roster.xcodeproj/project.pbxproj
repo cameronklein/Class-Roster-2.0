@@ -10,7 +10,6 @@
 		7E6E8EE819B99DF200DAD912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8EE719B99DF200DAD912 /* AppDelegate.swift */; };
 		7E6E8EEB19B99DF200DAD912 /* Class_Roster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8EE919B99DF200DAD912 /* Class_Roster.xcdatamodeld */; };
 		7E6E8EED19B99DF200DAD912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8EEC19B99DF200DAD912 /* ViewController.swift */; };
-		7E6E8EF019B99DF200DAD912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8EEE19B99DF200DAD912 /* Main.storyboard */; };
 		7E6E8EF219B99DF200DAD912 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8EF119B99DF200DAD912 /* Images.xcassets */; };
 		7E6E8EFE19B99DF200DAD912 /* Class_RosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8EFD19B99DF200DAD912 /* Class_RosterTests.swift */; };
 		7E6E8F0819B99E5B00DAD912 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0719B99E5B00DAD912 /* Person.swift */; };
@@ -41,7 +40,6 @@
 		7E6E8EE719B99DF200DAD912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E6E8EEA19B99DF200DAD912 /* Class_Roster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Class_Roster.xcdatamodel; sourceTree = "<group>"; };
 		7E6E8EEC19B99DF200DAD912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E6E8EEF19B99DF200DAD912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E6E8EF119B99DF200DAD912 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E6E8EF719B99DF200DAD912 /* Class RosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Class RosterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E8EFC19B99DF200DAD912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */,
 				7E6E8F0F19B99E8A00DAD912 /* Roster.plist */,
 				7E6E8F0719B99E5B00DAD912 /* Person.swift */,
-				7E6E8EEE19B99DF200DAD912 /* Main.storyboard */,
 				7E6E8EF119B99DF200DAD912 /* Images.xcassets */,
 				7E6E8EE919B99DF200DAD912 /* Class_Roster.xcdatamodeld */,
 				7E6E8EE519B99DF200DAD912 /* Supporting Files */,
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6E8F1619B99E8A00DAD912 /* Roster.plist in Resources */,
-				7E6E8EF019B99DF200DAD912 /* Main.storyboard in Resources */,
 				7E6E8F1A19B99F5D00DAD912 /* unknownSilhouette.png in Resources */,
 				7E6E8F1119B99E8A00DAD912 /* Camera-Icon.png in Resources */,
 				7E6E8EF219B99DF200DAD912 /* Images.xcassets in Resources */,
@@ -274,17 +270,6 @@
 			targetProxy = 7E6E8EF819B99DF200DAD912 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7E6E8EEE19B99DF200DAD912 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E6E8EEF19B99DF200DAD912 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7E6E8EFF19B99DF200DAD912 /* Debug */ = {
@@ -441,6 +426,7 @@
 				7E6E8F0319B99DF200DAD912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E6E8F0419B99DF200DAD912 /* Build configuration list for PBXNativeTarget "Class RosterTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +435,7 @@
 				7E6E8F0619B99DF200DAD912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

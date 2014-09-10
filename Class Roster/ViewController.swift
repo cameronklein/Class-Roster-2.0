@@ -42,11 +42,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if segue.identifier! == "Detail" {
+        if segue.identifier == "Detail" {
             let index = tableView.indexPathForSelectedRow()
-            let selectedPerson = personArray[index.section][index.row]
+            let selectedPerson = personArray[index!.section][index!.row]
             let destination = segue.destinationViewController as DetailViewController
             destination.thisPerson = selectedPerson
         }
@@ -91,57 +91,53 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: UITableView Data Source / Delegate
     
-    func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return personArray.count
         
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return personArray[section].count
         
     }
-    
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView!.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         var thisPerson = self.personArray[indexPath.section][indexPath.row] as Person
-        cell.textLabel.text = thisPerson.fullName()
+        cell.textLabel!.text = thisPerson.fullName()
         
-        var image : UIImage? = UIImage(data: thisPerson.image)
+        var image : UIImage
         
-        if image == nil{
+        if thisPerson.image == nil {
             image = UIImage(named: "unknownSilhouette")
+        } else {
+            image = UIImage(data: thisPerson.image!)
         }
+
+    
         
-        cell.imageView.image = getSmallImagefromBigImage(image!)
+        cell.imageView!.image = getSmallImagefromBigImage(image)
         
         
-        cell.imageView.frame = CGRectMake(0.0, 0.0, 40.0, 40.0)
-        cell.imageView.clipsToBounds = true
-        cell.imageView.layer.borderColor = UIColor.blackColor().CGColor
-        cell.imageView.layer.borderWidth = 1
-        cell.imageView.layer.cornerRadius = cell.imageView.frame.size.height / 2.0
+        cell.imageView!.frame = CGRectMake(0.0, 0.0, 40.0, 40.0)
+        cell.imageView!.clipsToBounds = true
+        cell.imageView!.layer.borderColor = UIColor.blackColor().CGColor
+        cell.imageView!.layer.borderWidth = 1
+        cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.height / 2.0
         
         return cell
     }
     
-    func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String! {
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String! {
         switch section {
         case 0: return "Students"
         case 1: return "Teachers"
         default: return " "
             
         }
-    }
-    
-    func tableView(tableView: UITableView!, willDisplayHeaderView view: UIView!, forSection section: Int) {
-        
-    }
-    
-    func tableView(tableView: UITableView!, willDisplayCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
-        
     }
     
     //MARK: CoreData

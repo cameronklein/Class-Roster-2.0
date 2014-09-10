@@ -43,24 +43,24 @@ class AddPersonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         firstName = firstNameField.text
         lastName = lastNameField.text
     }
     
     //MARK: UIPickerViewDataSource/Delegate
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
     
-    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 2
     }
     
     
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         
         switch row{
             case 0: return "Student"
@@ -70,7 +70,7 @@ class AddPersonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         switch row{
         case 0: position = "Student"
@@ -96,7 +96,7 @@ class AddPersonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     //MARK: Other
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         if firstNameField.isFirstResponder(){
             firstNameField.resignFirstResponder()
         } else if lastNameField.isFirstResponder(){

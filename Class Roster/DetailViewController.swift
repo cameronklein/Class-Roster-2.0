@@ -29,10 +29,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         nameField.text              = thisPerson.fullName()
         studentLabel.text           = thisPerson.position
         gitHubUserNameField.text    = thisPerson.gitHubUserName
-        personImage.image           = UIImage(data: thisPerson.image)
         
         if thisPerson.image == nil{
             personImage.image = UIImage(named: "unknownSilhouette")
+        } else {
+            personImage.image = UIImage(data: thisPerson.image!)
+
         }
         
         self.nameField.delegate             = self
@@ -182,7 +184,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         })
         
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {action in
-            let textField = alert.textFields[0] as UITextField
+            let textField = alert.textFields![0] as UITextField
             let username = textField.text as String
             println(username)
             self.thisPerson.gitHubUserName = username
@@ -279,7 +281,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     //MARK: Other
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         nameField.resignFirstResponder()
         gitHubUserNameField.resignFirstResponder()
     }
