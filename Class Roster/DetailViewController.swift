@@ -12,6 +12,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     var thisPerson : Person!
     var imageDownloadQueue = NSOperationQueue()
+    var background : UIImage!
     
     @IBOutlet weak var personImage          :   UIImageView!
     @IBOutlet weak var nameField            :   UITextField!
@@ -19,6 +20,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var cameraButton         :   UIButton!
     @IBOutlet weak var gitHubUserNameField  :   UITextField!
     @IBOutlet weak var spinningWheel        :   UIActivityIndicatorView!
+
+    @IBOutlet weak var gitHubLogo: UIImageView!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBAction func backToRoot(sender: UIBarButtonItem) {
+        
+    }
     
     //MARK: Lifecycle Methods
     
@@ -29,6 +36,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         nameField.text              = thisPerson.fullName()
         studentLabel.text           = thisPerson.position
         gitHubUserNameField.text    = thisPerson.gitHubUserName
+ 
         
         if thisPerson.image == nil{
             personImage.image = UIImage(named: "unknownSilhouette")
@@ -49,15 +57,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         super.viewWillAppear(animated)
         
-        UIView.animateWithDuration(0.0, animations: { () -> Void in
-            self.cameraButton.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01)
-        })
+//        UIView.animateWithDuration(0.0, animations: { () -> Void in
+//            self.cameraButton.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01)
+//        })
         
         personImage.clipsToBounds = true
         personImage.layer.borderColor = UIColor.blackColor().CGColor
         personImage.layer.borderWidth = 2
-        
-        animateImage()
+        //animateImage()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -66,6 +73,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         if thisPerson.image == nil && thisPerson.gitHubUserName != nil{
             updateImageFromGitHubUserName(thisPerson.gitHubUserName!)
         }
+        
         
     }
     

@@ -49,6 +49,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let selectedPerson = personArray[index!.section][index!.row]
             let destination = segue.destinationViewController as DetailViewController
             destination.thisPerson = selectedPerson
+            
+            //Get screenshot
+            UIGraphicsBeginImageContext(view.frame.size)
+            view.layer.renderInContext(UIGraphicsGetCurrentContext())
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            destination.background = image
+            
         }
     }
     

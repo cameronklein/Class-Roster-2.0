@@ -22,6 +22,7 @@
 		7E6E8F1619B99E8A00DAD912 /* Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F0F19B99E8A00DAD912 /* Roster.plist */; };
 		7E6E8F1919B99F5D00DAD912 /* Blue-Gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F1719B99F5D00DAD912 /* Blue-Gradient.png */; };
 		7E6E8F1A19B99F5D00DAD912 /* unknownSilhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */; };
+		7EBCE27E19C2A21000CCA786 /* DropInSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7E6E8F0F19B99E8A00DAD912 /* Roster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Roster.plist; sourceTree = "<group>"; };
 		7E6E8F1719B99F5D00DAD912 /* Blue-Gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue-Gradient.png"; sourceTree = "<group>"; };
 		7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknownSilhouette.png; sourceTree = "<group>"; };
+		7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropInSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				7E6E8EE719B99DF200DAD912 /* AppDelegate.swift */,
 				7E6E8EEC19B99DF200DAD912 /* ViewController.swift */,
+				7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */,
 				7E6E8F0919B99E8A00DAD912 /* AddPersonViewController.swift */,
 				7E6E8F0C19B99E8A00DAD912 /* DetailViewController.swift */,
 				7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6E8EED19B99DF200DAD912 /* ViewController.swift in Sources */,
+				7EBCE27E19C2A21000CCA786 /* DropInSegue.swift in Sources */,
 				7E6E8EE819B99DF200DAD912 /* AppDelegate.swift in Sources */,
 				7E6E8F0819B99E5B00DAD912 /* Person.swift in Sources */,
 				7E6E8F1319B99E8A00DAD912 /* DetailViewController.swift in Sources */,
