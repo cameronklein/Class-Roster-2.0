@@ -125,7 +125,7 @@ class DropInSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
         itemBehavior = UIDynamicItemBehavior(items: items)
         gravity = UIGravityBehavior(items: items)
         
-        gravity?.magnitude = 4.0
+        gravity!.magnitude = 4.0
         
         itemBehavior?.elasticity = 0.4
         
