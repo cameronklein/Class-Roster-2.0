@@ -24,6 +24,7 @@
 		7E6E8F1A19B99F5D00DAD912 /* unknownSilhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */; };
 		7E7C8F2419C2C4FB00B5364F /* DropInSegueDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C8F2319C2C4FB00B5364F /* DropInSegueDynamic.swift */; };
 		7EBCE27E19C2A21000CCA786 /* DropInSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */; };
+		7EE5D1E419C4F18200D95545 /* DropOutSegueDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D1E319C4F18200D95545 /* DropOutSegueDynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		7E6E8F1819B99F5D00DAD912 /* unknownSilhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknownSilhouette.png; sourceTree = "<group>"; };
 		7E7C8F2319C2C4FB00B5364F /* DropInSegueDynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropInSegueDynamic.swift; path = ../DropInSegueDynamic.swift; sourceTree = "<group>"; };
 		7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropInSegue.swift; sourceTree = "<group>"; };
+		7EE5D1E319C4F18200D95545 /* DropOutSegueDynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropOutSegueDynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				7E6E8F0919B99E8A00DAD912 /* AddPersonViewController.swift */,
 				7EBCE27D19C2A21000CCA786 /* DropInSegue.swift */,
 				7E7C8F2319C2C4FB00B5364F /* DropInSegueDynamic.swift */,
+				7EE5D1E319C4F18200D95545 /* DropOutSegueDynamic.swift */,
 				7E6E8F0C19B99E8A00DAD912 /* DetailViewController.swift */,
 				7E6E8F0E19B99E8A00DAD912 /* Main.storyboard */,
 				7E6E8F0F19B99E8A00DAD912 /* Roster.plist */,
@@ -257,6 +260,7 @@
 				7E6E8F1319B99E8A00DAD912 /* DetailViewController.swift in Sources */,
 				7E7C8F2419C2C4FB00B5364F /* DropInSegueDynamic.swift in Sources */,
 				7E6E8EEB19B99DF200DAD912 /* Class_Roster.xcdatamodeld in Sources */,
+				7EE5D1E419C4F18200D95545 /* DropOutSegueDynamic.swift in Sources */,
 				7E6E8F1019B99E8A00DAD912 /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
