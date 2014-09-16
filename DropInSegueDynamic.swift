@@ -155,7 +155,7 @@ class DropInSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
                 
                 self.screenshot.addNaturalBelowEffect(maximumRelativeValue: 20.0)
                 
-                self.source.navigationController?.pushViewController(self.destination, animated: false)
+                self.source.presentViewController(self.destination, animated: false, completion: nil)
                 self.destination.navigationController?.setNavigationBarHidden(false, animated: true)
                 
                 self.destination.view.sendSubviewToBack(self.screenshot2)
@@ -165,7 +165,7 @@ class DropInSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
                 self.destination.view.exchangeSubviewAtIndex(subs.indexOfObject(self.screenshot), withSubviewAtIndex: subs.indexOfObject(self.screenshot2))
                 
                 UIView.animateWithDuration(0.75,
-                    delay: 1.0,
+                    delay: 0.75,
                     options: nil,
                     animations: { () -> Void in
                         
@@ -196,7 +196,6 @@ class DropInSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
         
         
     }
-    
-    
+
     
 }

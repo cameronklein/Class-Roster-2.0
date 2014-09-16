@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
+    
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
+        
+        tableView.rowHeight = 50
         
     }
     
@@ -61,6 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    
+    
     //MARK: Unwind Methods
     
     @IBAction func unwindFromCreateNewPerson(segue: UIStoryboardSegue){
@@ -88,6 +93,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func unwindFromCancelButton(segue: UIStoryboardSegue){/*Do nothing*/}
     
+    @IBAction func unwindFromBackButton(segue: DropOutSegueDynamic){/*Do nothing*/
+    
+        self.presentViewController(segue.sourceViewController as UIViewController, animated: false, completion: nil)
+    
+    
+    }
+    
+
+    
     
     @IBAction func unwindFromDeletePerson(segue: UIStoryboardSegue){
         
@@ -99,6 +113,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // MARK: UITableView Data Source / Delegate
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -231,6 +246,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         image.drawInRect(CGRectMake(0.0, 0.0, 40.0, 40.0))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
         
         return newImage

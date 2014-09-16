@@ -11,7 +11,7 @@ import UIKit
 
 @objc(DropOutSegueDynamic)
 
-class DropOutSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
+class DropOutSegueDynamic: UIStoryboardSegue {
     
     var source : DetailViewController!
     var destination : ViewController!
@@ -30,8 +30,8 @@ class DropOutSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
     
     override func perform () {
         
-        destination = self.sourceViewController as ViewController
-        source = self.destinationViewController as DetailViewController
+        destination = self.destinationViewController as ViewController
+        source = self.sourceViewController as DetailViewController
         
         let screenHeight = UIScreen.mainScreen().bounds.height
         let screenWidth = UIScreen.mainScreen().bounds.width
@@ -48,51 +48,26 @@ class DropOutSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
         overlayView.backgroundColor = UIColor.blackColor()
         destination.view.addSubview(overlayView)
         
+        UIView.animateWithDuration(0.0, animations: { () -> Void in
+            self.destination.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.6, 0.6)
+            self.overlayView.alpha = 0.85
+        })
+    
+        // Add destination view
         
-        //Add destination view
         
-        appdel.window!.addSubview(destination.view)
+        let oldBack = source.view.subviews[0] as UIView
+        oldBack.removeFromSuperview()
+        source.view.addSubview(destination.view)
+        source.view.sendSubviewToBack(destination.view)
+        
+        var items = [self.source.personImage]
         
         //
-        // Hide labels and such on destination
+        // Gravity Stuff
         //
         
-        self.destination.nameField.alpha = 0.0
-        self.destination.studentLabel.alpha = 0.0
-        self.destination.gitHubUserNameField.alpha = 0.0
-        self.destination.cameraButton.alpha = 0.0
-        self.destination.deleteButton.alpha = 0.0
-        self.destination.gitHubLogo.alpha = 0.0
-        
-        self.destination.nameField.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        self.destination.studentLabel.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        self.destination.gitHubUserNameField.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        self.destination.cameraButton.addNaturalOnTopEffect(maximumRelativeValue: 50.0)
-        self.destination.deleteButton.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        self.destination.gitHubLogo.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        self.destination.personImage.addNaturalOnTopEffect(maximumRelativeValue: 20.0)
-        
-        self.destination.nameField.textColor = UIColor.whiteColor()
-        self.destination.studentLabel.textColor = UIColor.whiteColor()
-        self.destination.gitHubUserNameField.textColor = UIColor.whiteColor()
-        self.destination.studentLabel.textColor = UIColor.whiteColor()
-        
-        //Take Screenshot
-        
-        screenshot2 = destination.view.snapshotViewAfterScreenUpdates(true)
-        
-        
-        
-        self.destination.personImage.alpha = 0.0
-        
-        
-        
-        destination.view.addSubview(screenshot2)
-        screenshot2.center = CGPoint(x: center.x, y: center.y - screenHeight)
-        
-        var items = [screenshot2]
-        
-        animator = UIDynamicAnimator(referenceView: destination.view)
+        animator = UIDynamicAnimator(referenceView: source.view)
         collision = UICollisionBehavior(items: items)
         itemBehavior = UIDynamicItemBehavior(items: items)
         gravity = UIGravityBehavior(items: items)
@@ -106,62 +81,48 @@ class DropOutSegueDynamic: UIStoryboardSegue, UICollisionBehaviorDelegate {
         animator?.addBehavior(itemBehavior)
         
         collision!.translatesReferenceBoundsIntoBoundary = false
-        collision?.addBoundaryWithIdentifier("barrier", fromPoint: CGPoint(x: 0.0, y: screenHeight), toPoint: CGPoint(x: screenWidth, y: screenHeight))
         
-        collision?.collisionDelegate = self
         
-        UIView.animateWithDuration(0.4,
+        
+        UIView.animateWithDuration(0.5,
             delay: 0.0,
             options: UIViewAnimationOptions.CurveEaseInOut,
             animations: { () -> Void in
-                self.duplicatedSourceView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.6, 0.6)
-                self.overlayView.alpha = 0.85
+            
+                self.source.nameField.alpha = 0.0
+                self.source.studentLabel.alpha = 0.0
+                self.source.gitHubUserNameField.alpha = 0.0
+                self.source.cameraButton.alpha = 0.0
+                self.source.deleteButton.alpha = 0.0
+                self.source.gitHubLogo.alpha = 0.0
                 
             },
             completion: { (Bool) -> Void in
                 
+
                 
-                self.screenshot = self.source.view.snapshotViewAfterScreenUpdates(true)
-                self.destination.view.addSubview(self.screenshot)
-                self.destination.view.sendSubviewToBack(self.screenshot)
                 
-                self.screenshot.addNaturalBelowEffect(maximumRelativeValue: 20.0)
-                
-                self.source.navigationController?.pushViewController(self.destination, animated: false)
-                self.destination.navigationController?.setNavigationBarHidden(false, animated: true)
-                
-                self.destination.view.sendSubviewToBack(self.screenshot2)
-                
-                let subs = self.destination.view.subviews as NSArray
-                
-                self.destination.view.exchangeSubviewAtIndex(subs.indexOfObject(self.screenshot), withSubviewAtIndex: subs.indexOfObject(self.screenshot2))
-                
-                UIView.animateWithDuration(0.75,
-                    delay: 1.0,
+                UIView.animateWithDuration(0.5,
+                    delay: 0.0,
                     options: nil,
                     animations: { () -> Void in
                         
-                        self.destination.view.hidden = false
-                        self.destination.nameField.alpha = 1.0
-                        self.destination.studentLabel.alpha = 1.0
-                        self.destination.gitHubUserNameField.alpha = 1.0
-                        self.destination.studentLabel.alpha = 1.0
-                        self.destination.cameraButton.alpha = 0.6
-                        self.destination.deleteButton.alpha = 1.0
-                        self.destination.gitHubLogo.alpha = 1.0
-                        self.destination.personImage.alpha = 1.0
+                        self.destination.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0)
+                        self.overlayView.alpha = 0.00
+                        
                         
                     },
                     completion: { (Bool) -> Void in
                         
-                        self.screenshot2.removeFromSuperview()
+                        self.appdel.window!.addSubview(self.destination.view)
+                        
                         self.overlayView.removeFromSuperview()
-                        self.duplicatedSourceView.removeFromSuperview()
-                        self.source.tableView.hidden = false
+                        self.source.presentViewController(self.destination, animated: false, completion: nil)
+                        self.source.view.removeFromSuperview()
+                        
+                        
                 })
-                
-                
-                
+
                 
         })
         
